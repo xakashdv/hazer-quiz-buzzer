@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111827" />
+  <title>Hazer Quiz Buzzer</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar"><div class="brand"><span class="brand-mark">⚡</span><span>Hazer <b>Quiz Buzzer</b></span></div><span class="live-pill"><i></i> Real-time play</span></header>
+  <main id="app"><section class="hero"><div><p class="eyebrow">TEAM QUIZ GAME</p><h1>Fastest finger<br><span>wins the round.</span></h1><p class="hero-copy">Create a room, invite your teams, and let every device become a lightning-fast buzzer.</p></div><div class="hero-art">⚡</div></section>
+    <section id="home" class="mode-grid"><button class="mode-card create-mode" data-screen="create"><span class="mode-icon">＋</span><strong>Create a room</strong><small>Host a new game and manage your teams</small><span class="arrow">→</span></button><button class="mode-card join-mode" data-screen="join"><span class="mode-icon">↗</span><strong>Join a room</strong><small>Enter your team code to connect</small><span class="arrow">→</span></button></section>
+    <section id="create" class="panel hidden"><button class="back">← Back</button><div class="panel-heading"><p class="eyebrow">HOST SETUP</p><h2>Create your room</h2><p>Configure your teams. Each team gets a unique color and buzzer code.</p></div><label class="field-label">Number of teams <select id="team-count"><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></label><div id="team-inputs" class="team-inputs"></div><button id="create-btn" class="primary">Create room <span>→</span></button></section>
+    <section id="join" class="panel narrow hidden"><button class="back">← Back</button><div class="panel-heading"><p class="eyebrow">TEAM ACCESS</p><h2>Join your team</h2><p>Enter the 5-digit code shown by your host.</p></div><label class="field-label">Team 5-digit code<input id="team-code" inputmode="numeric" maxlength="5" placeholder="e.g. 48291" /></label><button id="join-btn" class="primary">Join buzzer <span>→</span></button></section>
+    <section id="dashboard" class="dashboard hidden"><div class="dash-head"><div><p class="eyebrow">HOST DASHBOARD · ROOM <b id="room-code"></b></p><h2>Ready when you are.</h2></div><div class="timer" id="timer">20</div></div><div class="dash-actions"><button id="start-btn" class="primary">Start 20 second round <span>▶</span></button><button id="reset-btn" class="secondary">Reset round</button></div><div id="team-list" class="team-list"></div><div class="results"><h3>Buzzer order <small>First team to buzz appears first</small></h3><ol id="buzzer-list"><li class="empty">No buzzes yet — start a round!</li></ol></div></section>
+    <section id="buzzer" class="buzzer-view hidden"><div class="buzzer-team"><span class="eyebrow">YOU ARE BUZZING FOR</span><h2 id="buzzer-name"></h2><span id="connection">Connected</span></div><div class="big-buzzer-wrap"><button id="buzz-btn" class="big-buzzer">BUZZ!</button></div><p id="buzzer-message">Wait for the host to start the round.</p></section>
+    <div id="toast" class="toast"></div>
+  </main><footer>Hazer Quiz Buzzer <span>•</span> Built for fair, fast team play</footer>
+  <script src="/app.js"></script>
+</body>
+</html>

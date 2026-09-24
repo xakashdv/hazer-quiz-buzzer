@@ -1,0 +1,17 @@
+{
+  "name": "hazer-quiz-buzzer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Real-time team quiz buzzer game.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
